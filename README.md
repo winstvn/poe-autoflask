@@ -4,7 +4,7 @@ AutoHotKey script for autoflask utility in Path of Exile.
 
 How does this script work?
 ----
-This autoflask script does not require you to input flask timer, instead it works by scanning your screen to find the duration left on your flask effects. The flasks will be automatically activated while you are in combat and when the flask effects are finished; this results in a 100% flask uptime during combat. The keypresses are delayed a random duration to emulate human behaviour.
+This autoflask script does not require you to input flask duration times, instead it works by scanning your screen to find the duration left on your flask effects. The flasks will be automatically activated while you are in combat and when the flask effects are finished; this results in a 100% flask uptime during combat. The keypresses are delayed a random duration to emulate human behaviour.
 
 How do I run it?
 ----
