@@ -8,13 +8,13 @@ This autoflask script does not require you to input flask timer, instead it work
 
 How do I run it?
 ----
-*Option #1:*
+*Option #1:*  
 Download and install AutoHotKey from here: https://www.autohotkey.com/ (current version or V2 Alpha will work)  
 Download the ahk file from this repo and run the script.
 
 OR
 
-*Option #2:*
+*Option #2:*  
 *Note: You will not be able to configure the keybinds and values if you go with this option.*  
 Download the precompiled executable and run the script without installing AutoHotKey.  
 
