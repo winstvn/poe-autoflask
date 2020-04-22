@@ -19,7 +19,7 @@ OR
 Download the precompiled executable and run the script without installing AutoHotKey.  
 
 
-How do I configure it?
+Configurations
 ---
 tbd
 
