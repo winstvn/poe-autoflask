@@ -14,7 +14,7 @@ Download the ahk file from this repo and run the script.
 OR
 
 *Note: You will not be able to make any configurations to keybinds if you go with this option.*  
-Download the precompiled executable and run the script without installing AutoHotKey.  
+Download the precompiled executable to run the script without installing AutoHotKey.  
 
 
 Configurations
