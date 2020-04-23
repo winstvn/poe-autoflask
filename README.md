@@ -10,7 +10,7 @@ AutoHotKey script for autoflask utility in Path of Exile.
 Features
 ----
 - Automatically activates your flasks for you so that you can maximize your flask uptime without having to worry about getting carpal tunnel syndrome.
-- Unlike some other autoflasking scripts, this one does not require you to tediously input the flask durations.
+- Unlike some other autoflasking scripts, this one does not require you to tediously input your flask durations.
 - Only activates during combat and ensures 100% flask uptime during mapping.
 - Emulates human behaviour with random delay times.
 
@@ -34,9 +34,7 @@ Configurations
 *To be updated.*  
 | Function       | Keybind              |
 |----------------|----------------------|
-| F1             | Toggle Script On/Off |
-| Mouse Button 4 | Toggle Script On     |
-| Mouse Button 5 | Toggle Script Off    |
+| Mouse Button 5 | Toggle Script On/Off |
 | Flask 1        | 1                    |
 | Flask 2        | 2                    |
 | Flask 3        | 3                    |
