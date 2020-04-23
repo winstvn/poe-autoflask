@@ -1,15 +1,26 @@
 # poe-autoflask
-AutoHotKey script for autoflask utility in Path of Exile.  
-*Disclaimer: As with any script, use this at your own risk! The script is generally safe as long as you use the default delay values.*
+AutoHotKey script for autoflask utility in Path of Exile.
 
-How does this script work?
+<p align="center">
+  <img src="https://media.giphy.com/media/TLfssGIcO8dqMGFaWt/giphy.gif">
+</p>
+
+*Disclaimer: As with any script, use this at your own risk! The script is generally safe as long as you use the default delay values.* 
+
+Features
 ----
-This autoflask script does not require you to input flask duration times, instead it works by scanning your screen to find the duration left on your flask effects. The flasks will be automatically activated while you are in combat and when the flask effects are finished; this results in a 100% flask uptime during combat. The keypresses are delayed a random duration to emulate human behaviour.
+- Unlike some other autoflasking scripts, this one does not require you to input the flask durations.
+- Only activates during combat and ensures 100% flask uptime during mapping.
+- Emulates human behaviour with random delay times.
+
+How does it work?
+---
+This script uses the `PixelGetColor` command to scan the bottom left region of your screen to detect when your flask effects have worn out. It will automatically activate your flasks if the yellow bar runs out and you are in combat.
 
 How do I run it?
 ----
 Download and install AutoHotKey from here: https://www.autohotkey.com/ (current version or V2 Alpha will work)  
-Download the ahk file from this repo and run the script.
+Then, clone or download the ahk file from this repo and run `autoflask.ahk`.
 
 OR
 
@@ -20,4 +31,9 @@ Download the precompiled executable to run the script without installing AutoHot
 Configurations
 ---
 tbd
+
+TODO
+---
+- Add user configurability (GUI? Nah. Unless... aha)
+- Automatic activation of hp flask when low life threshold is reached.
 
