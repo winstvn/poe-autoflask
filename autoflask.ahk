@@ -6,7 +6,7 @@
 
 pot_bar_col := "0x99D7F9"
 Hotkey, RButton, Off
-
+flasking := False
 
 random_sleep()
 {
@@ -15,24 +15,14 @@ random_sleep()
 	return
 }
 
-~F1::
+~XButton2::
 {
+	ToolTip, % "Autoflask " ((flasking := !flasking) ? "enabled" : "disabled")
+	SetTimer, remove_ToolTip, 300
 	Hotkey, RButton, Toggle
 }
 
-XButton2::
-{
-	Hotkey, RButton, On
-	return
-}
-
-XButton1::
-{
-	Hotkey, RButton, Off
-	return
-}
-
-; much of this is hardcoded, but I will be updating it for better scalability.
+; hardcoded, but I will be updating it for better scalability.
 ~RButton::
 {
 	while(GetKeyState("RButton", "P"))
@@ -62,5 +52,11 @@ XButton1::
 
 		sleep 200
 	}
+	return
+}
+
+remove_ToolTip:
+{
+	ToolTip
 	return
 }
