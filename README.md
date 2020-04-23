@@ -31,7 +31,19 @@ Download the precompiled executable `autoflask.exe` to run the script without in
 
 Configurations
 ---
-*tbd*
+*To be updated.*  
+| Function       | Keybind              |
+|----------------|----------------------|
+| F1             | Toggle Script On/Off |
+| Mouse Button 4 | Toggle Script On     |
+| Mouse Button 5 | Toggle Script Off    |
+| Flask 1        | 1                    |
+| Flask 2        | 2                    |
+| Flask 3        | 3                    |
+| Flask 4        | 4                    |  
+These are just my keybinds. Feel free to change them to whatever you prefer.  
+This will probably change in the future.
+
 
 TODO
 ---
