@@ -25,7 +25,7 @@ Then, clone or download the ahk file from this repo and run `autoflask.ahk`.
 OR
 
 *Note: You will not be able to make any configurations to keybinds if you go with this option.*  
-Download the precompiled executable `autoflask.exe`) to run the script without installing AutoHotKey.  
+Download the precompiled executable `autoflask.exe` to run the script without installing AutoHotKey.  
 
 
 Configurations
