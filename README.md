@@ -15,7 +15,7 @@ Features
 
 How does it work?
 ---
-This script uses the `PixelGetColor` command to scan the bottom left region of your screen to detect when your flask effects have worn out. It will automatically activate your flasks if the yellow bar runs out and you are in combat.
+This script uses the `PixelGetColor` command to scan the bottom left region of your screen to detect when your flask effects have worn out. It will automatically reactivate your flasks if the duration bar runs out and you are in combat.
 
 How do I run it?
 ----
