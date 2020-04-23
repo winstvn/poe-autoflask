@@ -34,6 +34,6 @@ tbd
 
 TODO
 ---
-- Add user configurability (GUI? Nah. Unless... aha)
+- Add user configurability (GUI? Nah... Unless? aha 🤫)
 - Automatic activation of hp flask when low life threshold is reached.
 
