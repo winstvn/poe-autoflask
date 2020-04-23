@@ -30,7 +30,7 @@ Download the precompiled executable to run the script without installing AutoHot
 
 Configurations
 ---
-tbd
+*tbd*
 
 TODO
 ---
