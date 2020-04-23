@@ -15,7 +15,7 @@ random_sleep()
 	return
 }
 
-~XButton2::
+~F1::
 {
 	ToolTip, % "Autoflask " ((flasking := !flasking) ? "enabled" : "disabled")
 	SetTimer, remove_ToolTip, 300
