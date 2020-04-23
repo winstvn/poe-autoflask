@@ -35,6 +35,7 @@ Configurations
 | Function       | Keybind              |
 |----------------|----------------------|
 | Mouse Button 5 | Toggle Script On/Off |
+| Right Click    | Primary Attack       |
 | Flask 1        | 1                    |
 | Flask 2        | 2                    |
 | Flask 3        | 3                    |
