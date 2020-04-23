@@ -1,15 +1,10 @@
-; 	INITIALIZATION
-; ==================
-; contexts
 #IfWinActive Path of Exile
 #SingleInstance force
 #NoEnv  
 #Warn  
 #Persistent 
 
-; default color of potion duration bar
 pot_bar_col := "0x99D7F9"
-; hotkey off
 Hotkey, RButton, Off
 
 
@@ -20,7 +15,11 @@ random_sleep()
 	return
 }
 
-; activate/deactivate hotkey
+~F1::
+{
+	Hotkey, RButton, Toggle
+}
+
 XButton2::
 {
 	Hotkey, RButton, On
@@ -33,14 +32,7 @@ XButton1::
 	return
 }
 
-; for debug/calibrate pot_bar_col
-F3::
-{
-	PixelGetColor, pot_bar_col, 315, 1075
-	MsgBox, %pot_bar_col%
-	return
-}
-
+; much of this is hardcoded, but I will be updating it for better scalability.
 ~RButton::
 {
 	while(GetKeyState("RButton", "P"))
@@ -51,22 +43,16 @@ F3::
 		PixelGetColor, flask4_col, 450, 1075
 
 		if (flask1_col != pot_bar_col)
-		{
 			send 1
 			random_sleep()
-		}
 
 		if (flask2_col != pot_bar_col)
-		{
 			send 2
 			random_sleep()
-		}
 
 		if (flask3_col != pot_bar_col)
-		{
 			send 3
 			random_sleep()
-		}
 
 		if (flask4_col != pot_bar_col)
 		{
