@@ -40,7 +40,8 @@ Configurations
 | Flask 1        | 1                    |
 | Flask 2        | 2                    |
 | Flask 3        | 3                    |
-| Flask 4        | 4                    |  
+| Flask 4        | 4                    |
+
 These are just my keybinds. Feel free to change them to whatever you prefer.  
 This will probably change in the future.
 
