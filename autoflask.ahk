@@ -1,15 +1,10 @@
-; 	INITIALIZATION
-; ==================
-; contexts
 #IfWinActive Path of Exile
 #SingleInstance force
 #NoEnv  
 #Warn  
 #Persistent 
 
-; default color of potion duration bar
 pot_bar_col := "0x99D7F9"
-; hotkey off
 Hotkey, RButton, Off
 
 
@@ -20,7 +15,11 @@ random_sleep()
 	return
 }
 
-; activate/deactivate hotkey
+~F1::
+{
+	Hotkey, RButton, Toggle
+}
+
 XButton2::
 {
 	Hotkey, RButton, On
@@ -30,14 +29,6 @@ XButton2::
 XButton1::
 {
 	Hotkey, RButton, Off
-	return
-}
-
-; for debug/calibrate pot_bar_col
-F3::
-{
-	PixelGetColor, pot_bar_col, 315, 1075
-	MsgBox, %pot_bar_col%
 	return
 }
 
