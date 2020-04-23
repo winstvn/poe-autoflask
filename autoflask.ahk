@@ -55,10 +55,8 @@ XButton1::
 			random_sleep()
 
 		if (flask4_col != pot_bar_col)
-		{
 			send 4
 			random_sleep()
-		}
 
 		sleep 200
 	}
