@@ -34,7 +34,7 @@ Configurations
 **Default Setttings:**
 | Function       | Keybind              |
 |----------------|----------------------|
-| F1             | Toggle Script On/Off |
+| F8             | Toggle Script On/Off |
 | Right Click    | Primary Attack       |
 | Flask 1        | 1                    |
 | Flask 2        | 2                    |
