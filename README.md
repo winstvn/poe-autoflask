@@ -10,7 +10,7 @@ Simple and lightweight AutoHotKey script for autoflask utility in Path of Exile.
 Features
 ----
 - Automatically activates your flasks for you so that you can maximize your flask uptime without having to worry about getting carpal tunnel syndrome.
-- Unlike some other autoflasking scripts, this one does not require you to tediously input your flask durations.
+- Unlike some other autoflasking scripts, this one does not require you to tediously input your flask durations; thus, further reducing your chances of developing carpal tunnel syndrome.
 - Only activates during combat and ensures 100% flask uptime during mapping.
 - Emulates human behaviour with random delay times.
 
@@ -20,7 +20,7 @@ This script uses the `PixelGetColor` command to scan the bottom left region of y
 
 How do I run it?
 ----
-Download and install AutoHotKey from [their website.](https://www.autohotkey.com/)  (current version or V2 Alpha will work)  
+Download and install AutoHotKey from [their website.](https://www.autohotkey.com/) (current version)  
 Then, clone or download the ahk file from this repo and run `autoflask.ahk`.
 
 OR
@@ -31,7 +31,7 @@ Download the precompiled executable `autoflask.exe` to run the script without in
 
 Configurations
 ---
-*To be updated.*  
+**Default Setttings:**
 | Function       | Keybind              |
 |----------------|----------------------|
 | F1             | Toggle Script On/Off |
@@ -41,13 +41,20 @@ Configurations
 | Flask 3        | 3                    |
 | Flask 4        | 4                    |
 
-These are just my keybinds. Feel free to change them to whatever you prefer.  
-This will probably change in the future.
+You can configure the autoflask keybinds in line 24-26 of the AHK script.  
+Configuring the keymap for flasks are a bit more tricky, but see the example below:
 
+![Imgur](https://i.imgur.com/bCyTtC5.png)  
+In the above image, my offense/defense flasks are in slots 1, 2, 3, 4 with their corresponding keybinds as 1, 2, 3, 4. Thus, I would in line 24 of the script, I would write: `flasks := {1:1, 2:2, 3:3, 4:4}`.  
+The structure of the keymap configuration follows `flask := {[slot]:[button]}` where slot is the slot number from 1-5 and button is the corresponding button to activate.
+*Note: if you have a non-numerical input key, it must be wrapped in quotation marks, like `"F1"`. Some special keys like spacebar must be wrapping in curly braces as well `"{Space}"`.*
+
+This is the current method for configuring the keymap until I complete a GUI.
 
 TODO
 ---
-- Add user configurability **WIP**
-  - GUI? Nah... Unless? aha 🤫
-- Automatic activation of hp flask when low life threshold is reached.
+- ~~Add user configurability~~ ✅
+- ~~Further performance improvements~~ ✅
+- Automatic activation of hp flask when low life threshold is reached. **WIP**
+- GUI? Nah... Unless? aha 🤫
 
