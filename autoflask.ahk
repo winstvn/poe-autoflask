@@ -50,16 +50,16 @@ return
 attack:
 attack_up:
 if (!flasking and !looping) {
-	ToolTip, disabled!
-	SetTimer, remove_tooltip, -%tooltip_duration%
 	return 
 }
 
+; start flask_timer subroutine when attacking
 SetTimer, flask_timer, % (looping := !looping) ? 1 : "Off"
 return
 
 flask_timer:
 {
+	; check each flask to determine if they need to be activated
 	for flask_pos, bbutton in flasks
 	{
 		new_x := flask_origin_x+45*(flask_pos-1)
@@ -67,6 +67,7 @@ flask_timer:
 
         If (flask_col != flask_dur_col) 
         	send %bbutton%
+
 			Random, delay, delay_lower, delay_upper
 			sleep %delay%
 	}
