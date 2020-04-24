@@ -18,7 +18,7 @@ random_sleep()
 ~F1::
 {
 	ToolTip, % "Autoflask " ((flasking := !flasking) ? "enabled" : "disabled")
-	SetTimer, remove_ToolTip, 300
+	SetTimer, remove_ToolTip, -300
 	Hotkey, RButton, Toggle
 }
 
