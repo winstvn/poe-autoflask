@@ -1,5 +1,5 @@
-; Contexts
-;#IfWinActive Path of Exile
+; Directives
+#IfWinActive Path of Exile
 #Persistent
 #NoEnv
 #SingleInstance force
