@@ -41,6 +41,7 @@ Configurations
 | Flask 3        | 3                    |
 | Flask 4        | 4                    |
 
+**Flask Keymap:**  
 You can configure the autoflask keybinds in line 24-26 of the AHK script.  
 Configuring the keymap for flasks are a bit more tricky, but see the example below:
 
