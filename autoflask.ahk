@@ -3,6 +3,17 @@
 #Persistent
 #NoEnv
 #SingleInstance force
+#MaxHotkeysPerInterval 32767
+#HotkeyInterval 32767
+#KeyHistory 0
+ListLines Off
+Process, Priority, , L
+SetBatchLines, -1
+SetKeyDelay, -1, 25
+SetMouseDelay, -1
+SetWinDelay, -1
+SetControlDelay, -1
+SendMode Input
 
 ; USER CONFIGURATION
 ; ----------------------------------------------------
