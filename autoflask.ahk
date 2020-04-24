@@ -1,5 +1,5 @@
 ; Contexts
-#IfWinActive Path of Exile
+;#IfWinActive Path of Exile
 #Persistent
 #NoEnv
 #SingleInstance force
@@ -22,7 +22,7 @@ SendMode Input
 ; map your flasks {k:v, ..} where k your flask position and v is
 ; the key associated with the flask.
 flasks := {1:1, 2:2, 3:3, 4:4}
-toggle_key := "F1" ; key to toggle script on/off
+toggle_key := "F8" ; key to toggle script on/off
 attack_key := "RButton" ; key binded to your primary attack
 ; ----------------------------------------------------
 
@@ -62,6 +62,9 @@ flask_timer:
 	; check each flask to determine if they need to be activated
 	for flask_pos, bbutton in flasks
 	{
+		if 0 > flask_pos > 5:
+			Continue
+		
 		new_x := flask_origin_x+45*(flask_pos-1)
         PixelGetColor, flask_col, %new_x%, %flask_origin_y%
 
