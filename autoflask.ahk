@@ -69,11 +69,11 @@ flask_timer:
 			Continue
 		
 		new_x := flask_origin_x+45*(flask_pos-1)
-        PixelGetColor, flask_col, %new_x%, %flask_origin_y%
+        	PixelGetColor, flask_col, %new_x%, %flask_origin_y%
 
-        If (flask_col != flask_dur_col) 
+        	If (flask_col != flask_dur_col) 
 		{
-        	send %bbutton%
+        		send %bbutton%
 			Random, delay, delay_lower, delay_upper
 			sleep %delay%
 		}
