@@ -20,8 +20,8 @@ This script uses the `PixelGetColor` command to scan the bottom left region of y
 
 How do I run it?
 ----
-Download and install AutoHotKey from [their website.](https://www.autohotkey.com/) (current version)  
-Then, clone or download the ahk file from this repo and run `autoflask.ahk`.
+Download and install the current version of AutoHotKey from [their website.](https://www.autohotkey.com/)
+Then, clone or download the `autoflask.ahk` file from this repo and run.
 
 OR
 
