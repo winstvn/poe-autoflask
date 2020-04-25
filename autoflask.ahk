@@ -1,5 +1,5 @@
 ; Directives
-#IfWinActive Path of Exile
+;#IfWinActive Path of Exile
 #Persistent
 #NoEnv
 #SingleInstance force
@@ -40,24 +40,24 @@ Hotkey ~%attack_key% up, attack_up
 flask_dur_col := "0x99D7F9" ; this is the BRG of yellow
 flasking := True ; initialize flasking behaviour
 
-
 toggle_flasking:
 {
-ToolTip, % "Autoflask " ((flasking := !flasking) ? "enabled" : "disabled")
-SetTimer, remove_tooltip, -%tooltip_duration%
-return
+	ToolTip, % "Autoflask " ((flasking := !flasking) ? "enabled" : "disabled")
+	SetTimer, remove_tooltip, -%tooltip_duration%
+	return
 }
 
 ; autoflask
 attack:
 attack_up:
 {
-if (!flasking and !looping)
-	return 
+	if (!flasking and !looping){
+		return
+	} 
 
-; start flask_timer subroutine when attacking
-SetTimer, flask_timer, % (looping := !looping) ? 1 : "Off"
-return
+	; start flask_timer subroutine when attacking
+	SetTimer, flask_timer, % (looping := !looping) ? 1 : "Off"
+	return
 }
 
 flask_timer:
@@ -65,15 +65,16 @@ flask_timer:
 	; check each flask to determine if they need to be activated
 	for flask_pos, bbutton in flasks
 	{
-		if 0 > flask_pos > 5:
+		if ((flask_pos < 1) or (flask_pos > 5)) {
 			Continue
-		
-		new_x := flask_origin_x+45*(flask_pos-1)
-        	PixelGetColor, flask_col, %new_x%, %flask_origin_y%
+		}
 
-        	If (flask_col != flask_dur_col) 
+		new_x := flask_origin_x + 45 * (flask_pos - 1)
+		PixelGetColor, flask_col, %new_x%, %flask_origin_y%
+
+		If (flask_col != flask_dur_col) 
 		{
-        		send %bbutton%
+			send %bbutton%
 			Random, delay, delay_lower, delay_upper
 			sleep %delay%
 		}
@@ -83,6 +84,6 @@ flask_timer:
 
 remove_tooltip:
 {
-ToolTip
-return
+	ToolTip
+	return
 }
