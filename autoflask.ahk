@@ -1,5 +1,5 @@
 ; Directives
-#IfWinActive Path of Exile
+;#IfWinActive Path of Exile
 #Persistent
 #NoEnv
 #SingleInstance force
@@ -42,20 +42,23 @@ flasking := True ; initialize flasking behaviour
 
 
 toggle_flasking:
+{
 ToolTip, % "Autoflask " ((flasking := !flasking) ? "enabled" : "disabled")
 SetTimer, remove_tooltip, -%tooltip_duration%
 return
+}
 
 ; autoflask
 attack:
 attack_up:
-if (!flasking and !looping) {
+{
+if (!flasking and !looping)
 	return 
-}
 
 ; start flask_timer subroutine when attacking
 SetTimer, flask_timer, % (looping := !looping) ? 1 : "Off"
 return
+}
 
 flask_timer:
 {
@@ -69,14 +72,17 @@ flask_timer:
         PixelGetColor, flask_col, %new_x%, %flask_origin_y%
 
         If (flask_col != flask_dur_col) 
+		{
         	send %bbutton%
-
 			Random, delay, delay_lower, delay_upper
 			sleep %delay%
+		}
 	}
 	return
 }
 
 remove_tooltip:
+{
 ToolTip
 return
+}
