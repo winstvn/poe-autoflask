@@ -20,8 +20,8 @@ This script uses the `PixelGetColor` command to scan the bottom left region of y
 
 How do I run it?
 ----
-Download and install AutoHotKey from [their website.](https://www.autohotkey.com/) (current version)  
-Then, clone or download the ahk file from this repo and run `autoflask.ahk`.
+Download and install the current version of AutoHotKey from [their website.](https://www.autohotkey.com/)  
+Then, clone or download the `autoflask.ahk` file from this repo and run.
 
 OR
 
@@ -34,7 +34,7 @@ Configurations
 **Default Setttings:**
 | Function       | Keybind              |
 |----------------|----------------------|
-| F1             | Toggle Script On/Off |
+| F8             | Toggle Script On/Off |
 | Right Click    | Primary Attack       |
 | Flask 1        | 1                    |
 | Flask 2        | 2                    |
@@ -48,7 +48,7 @@ Configuring the keymap for flasks are a bit more tricky, but see the example bel
 ![Imgur](https://i.imgur.com/bCyTtC5.png)
 
 In the above image, my offense/defense flasks are in slots 1, 2, 3, 4 with their corresponding keybinds as 1, 2, 3, 4. Thus, I would in line 24 of the script, I would write: `flasks := {1:1, 2:2, 3:3, 4:4}`.  
-The structure of the keymap configuration follows `flask := {[slot]:[button]}` where slot is the slot number from 1-5 and button is the corresponding button to activate.  
+The structure of the keymap configuration follows `flask := {[slot]:[button], ...}` where slot is the slot number from 1-5 and button is the corresponding button to activate.  
 
 *Note: if you have a non-numerical input key, it must be wrapped in quotation marks, like `"F1"` or `"v"`. Some special keys like spacebar must be wrapping in curly braces as well `"{Space}"`.*
 
