@@ -1,5 +1,5 @@
 ; Directives
-#IfWinActive Path of Exile
+;#IfWinActive Path of Exile
 #Persistent
 #NoEnv
 #SingleInstance force
@@ -21,7 +21,7 @@ SendMode Input
 ; See https://www.autohotkey.com/docs/KeyList.htm for full list of accepted keys
 ; map your flasks {k:v, ..} where k your flask position and v is
 ; the key associated with the flask.
-flasks := {-1:1, 2:2, 3:3, 6:4}
+flasks := {1:1, 2:2, 3:3, 4:4}
 toggle_key := "F2" ; key to toggle script on/off
 attack_key := "RButton" ; key binded to your primary attack
 ; ----------------------------------------------------
