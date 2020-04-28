@@ -1,5 +1,5 @@
 ; Directives
-#IfWinActive Path of Exile
+;#IfWinActive Path of Exile
 #Persistent
 #NoEnv
 #SingleInstance force
@@ -26,38 +26,37 @@ toggle_key := "F8" ; key to toggle script on/off
 attack_key := "RButton" ; key binded to your primary attack
 ; ----------------------------------------------------
 
-; should not change these values
+; initialize default variables
 flask_origin_x := 316 ; x-origin of flask bar
 flask_origin_y := 1075 ; y-origin of flask bar
 delay_lower := 57 ; lower bound of sleep duration
 delay_upper := 114 ; upper bound of sleep duration
 tooltip_duration := 500 ; how long to keep tooltip up
+flask_dur_col := "0x99D7F9" ; this is the BRG of yellow
 
+; assign hotkeys to labels
 Hotkey ~%toggle_key%, toggle_flasking
 Hotkey ~%attack_key%, attack
 Hotkey ~%attack_key% up, attack_up
+Return
 
-flask_dur_col := "0x99D7F9" ; this is the BRG of yellow
-flasking := True ; default flasking behaviour
-
+; toggle flasking behaviour
 toggle_flasking:
 ToolTip, % "Autoflask " ((flasking := !flasking) ? "enabled" : "disabled")
 SetTimer, remove_tooltip, -%tooltip_duration%
 Return
 
-; autoflask
+; attack button hotkey
 attack:
 attack_up:
 if (!flasking and !looping) {
 	Return
 } 
-
-; start flask_timer subroutine when attacking
 SetTimer, flask_timer, % (looping := !looping) ? 1 : "Off"
 Return
 
+; flasking subroutine
 flask_timer:
-; check each flask to determine if they need to be activated
 for flask_pos, bbutton in flasks {
 	If ((flask_pos < 1) or (flask_pos > 5) or !flasking) {
 		Continue
@@ -74,6 +73,7 @@ for flask_pos, bbutton in flasks {
 }
 Return
 
+; clear any existing tooltips
 remove_tooltip:
 ToolTip
 Return
