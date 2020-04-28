@@ -31,7 +31,7 @@ Download the precompiled executable `autoflask.exe` to run the script without in
 
 Configurations
 ---
-**Default Setttings:**
+**Default Keybinds:**
 | Function       | Keybind              |
 |----------------|----------------------|
 | F2             | Toggle Script On/Off |
