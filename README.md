@@ -13,6 +13,7 @@ Features
 - Unlike some other autoflasking scripts, this one does not require you to tediously input your flask durations; thus, further reducing your chances of developing carpal tunnel syndrome.
 - Only activates during combat and ensures 100% flask uptime during mapping.
 - Emulates human behaviour with random delay times.
+- Utilizes less than 0.1% of CPU resources while running.
 
 How does it work?
 ---
