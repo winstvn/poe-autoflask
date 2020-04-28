@@ -1,5 +1,5 @@
 ; Directives
-;#IfWinActive Path of Exile
+#IfWinActive Path of Exile
 #Persistent
 #NoEnv
 #SingleInstance force
@@ -21,8 +21,8 @@ SendMode Input
 ; See https://www.autohotkey.com/docs/KeyList.htm for full list of accepted keys
 ; map your flasks {k:v, ..} where k your flask position and v is
 ; the key associated with the flask.
-flasks := {1:1, 2:2, 3:3, 4:4}
-toggle_key := "F8" ; key to toggle script on/off
+flasks := {-1:1, 2:2, 3:3, 6:4}
+toggle_key := "F2" ; key to toggle script on/off
 attack_key := "RButton" ; key binded to your primary attack
 ; ----------------------------------------------------
 
@@ -49,26 +49,27 @@ Return
 ; attack button hotkey
 attack:
 attack_up:
-if (!flasking and !looping) {
+If (!flasking and !looping) {
+	Return
+} Else {
+	SetTimer, flask_timer, % (looping := !looping) ? 1 : "Off"
 	Return
 } 
-SetTimer, flask_timer, % (looping := !looping) ? 1 : "Off"
-Return
 
 ; flasking subroutine
 flask_timer:
-for flask_pos, bbutton in flasks {
+For flask_pos, bbutton in flasks {
 	If ((flask_pos < 1) or (flask_pos > 5) or !flasking) {
 		Continue
-	}
+	} Else {
+		new_x := flask_origin_x + 45 * (flask_pos - 1)
+		PixelGetColor, flask_col, %new_x%, %flask_origin_y%
 
-	new_x := flask_origin_x + 45 * (flask_pos - 1)
-	PixelGetColor, flask_col, %new_x%, %flask_origin_y%
-
-	If (flask_col != flask_dur_col) {
-		send %bbutton%
-		Random, delay, delay_lower, delay_upper
-		sleep %delay%
+		If (flask_col != flask_dur_col) {
+			send %bbutton%
+			Random, delay, delay_lower, delay_upper
+			sleep %delay%
+		}
 	}
 }
 Return
