@@ -38,52 +38,42 @@ Hotkey ~%attack_key%, attack
 Hotkey ~%attack_key% up, attack_up
 
 flask_dur_col := "0x99D7F9" ; this is the BRG of yellow
-flasking := True ; initialize flasking behaviour
+flasking := True ; default flasking behaviour
 
 toggle_flasking:
-{
-	ToolTip, % "Autoflask " ((flasking := !flasking) ? "enabled" : "disabled")
-	SetTimer, remove_tooltip, -%tooltip_duration%
-	return
-}
+ToolTip, % "Autoflask " ((flasking := !flasking) ? "enabled" : "disabled")
+SetTimer, remove_tooltip, -%tooltip_duration%
+Return
 
 ; autoflask
 attack:
 attack_up:
-{
-	if (!flasking and !looping){
-		return
-	} 
+if (!flasking and !looping) {
+	Return
+} 
 
-	; start flask_timer subroutine when attacking
-	SetTimer, flask_timer, % (looping := !looping) ? 1 : "Off"
-	return
-}
+; start flask_timer subroutine when attacking
+SetTimer, flask_timer, % (looping := !looping) ? 1 : "Off"
+Return
 
 flask_timer:
-{
-	; check each flask to determine if they need to be activated
-	for flask_pos, bbutton in flasks
-	{
-		if ((flask_pos < 1) or (flask_pos > 5)) {
-			Continue
-		}
-
-		new_x := flask_origin_x + 45 * (flask_pos - 1)
-		PixelGetColor, flask_col, %new_x%, %flask_origin_y%
-
-		If (flask_col != flask_dur_col) 
-		{
-			send %bbutton%
-			Random, delay, delay_lower, delay_upper
-			sleep %delay%
-		}
+; check each flask to determine if they need to be activated
+for flask_pos, bbutton in flasks {
+	If ((flask_pos < 1) or (flask_pos > 5) or !flasking) {
+		Continue
 	}
-	return
+
+	new_x := flask_origin_x + 45 * (flask_pos - 1)
+	PixelGetColor, flask_col, %new_x%, %flask_origin_y%
+
+	If (flask_col != flask_dur_col) {
+		send %bbutton%
+		Random, delay, delay_lower, delay_upper
+		sleep %delay%
+	}
 }
+Return
 
 remove_tooltip:
-{
-	ToolTip
-	return
-}
+ToolTip
+Return
