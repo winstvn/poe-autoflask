@@ -34,12 +34,13 @@ Configurations
 **Default Setttings:**
 | Function       | Keybind              |
 |----------------|----------------------|
-| F8             | Toggle Script On/Off |
+| F2             | Toggle Script On/Off |
 | Right Click    | Primary Attack       |
 | Flask 1        | 1                    |
 | Flask 2        | 2                    |
 | Flask 3        | 3                    |
 | Flask 4        | 4                    |
+*I'd recommend setting the toggle key to something easily accessible so that you can quickly toggle autoflasking on/off in tense situations.*
 
 **Flask Keymap:**  
 You can configure the autoflask keybinds in line 24-26 of the AHK script.  
