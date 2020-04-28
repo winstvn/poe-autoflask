@@ -13,6 +13,7 @@ Features
 - Unlike some other autoflasking scripts, this one does not require you to tediously input your flask durations; thus, further reducing your chances of developing carpal tunnel syndrome.
 - Only activates during combat and ensures 100% flask uptime during mapping.
 - Emulates human behaviour with random delay times.
+- Utilizes less than 0.1% of CPU resources while running.
 
 How does it work?
 ---
@@ -31,15 +32,17 @@ Download the precompiled executable `autoflask.exe` to run the script without in
 
 Configurations
 ---
-**Default Setttings:**
+**Default Keybinds:**
 | Function       | Keybind              |
 |----------------|----------------------|
-| F8             | Toggle Script On/Off |
+| F2             | Toggle Script On/Off |
 | Right Click    | Primary Attack       |
 | Flask 1        | 1                    |
 | Flask 2        | 2                    |
 | Flask 3        | 3                    |
 | Flask 4        | 4                    |
+
+*I'd recommend binding the toggle key to something easily accessible so that you can quickly toggle autoflasking on/off in tense situations.*
 
 **Flask Keymap:**  
 You can configure the autoflask keybinds in line 24-26 of the AHK script.  
