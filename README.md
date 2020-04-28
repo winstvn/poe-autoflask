@@ -40,7 +40,8 @@ Configurations
 | Flask 2        | 2                    |
 | Flask 3        | 3                    |
 | Flask 4        | 4                    |
-*I'd recommend setting the toggle key to something easily accessible so that you can quickly toggle autoflasking on/off in tense situations.*
+
+*I'd recommend binding the toggle key to something easily accessible so that you can quickly toggle autoflasking on/off in tense situations.*
 
 **Flask Keymap:**  
 You can configure the autoflask keybinds in line 24-26 of the AHK script.  
