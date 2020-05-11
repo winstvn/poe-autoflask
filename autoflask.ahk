@@ -1,4 +1,3 @@
-; Directives                                                              
 #IfWinActive Path of Exile
 #Persistent
 #NoEnv
