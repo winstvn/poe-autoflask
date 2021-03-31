@@ -1,5 +1,5 @@
 # poe-autoflask
-Simple and lightweight AutoHotKey script for autoflask utility in Path of Exile.
+Simple and lightweight autoflasking utility for Path of Exile.
 
 <p align="center">
   <img src="https://media.giphy.com/media/TLfssGIcO8dqMGFaWt/giphy.gif">
